@@ -90,3 +90,214 @@ body{
     width: 100%;
     height: calc(100vmin - 77px);
 }
+
+.banner-wrapper{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: calc(100vmin - 74px);
+}
+
+.banner-left{
+    display: flex;
+    position: relative;
+    width: 60%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 50px;
+}
+
+.banner-left small{
+    padding: 5px 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.banner-left h1{
+    padding: 5px 0 10px 0;
+    font-size: 60px;
+    font-weight: 900;
+}
+
+.banner-left p{
+    padding: 10px 0;
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 25px;
+    color: #000;
+}
+
+.banner-right{
+    display: flex;
+    position: relative;
+    width: 40%;
+    height: 100%;
+    align-items: center;
+
+}
+
+.banner-right img{
+    display: block;
+    position: relative;
+    height: 400px;
+    width: auto;
+}
+
+.about-wrapper{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: calc(100vmin - 74px);
+}
+
+.about-left {
+    display: flex;
+    position: relative;
+    width: 50%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 50px;
+}
+
+.about-right{
+    display: flex;
+    position: relative;
+    width: 50%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 50px;
+}
+
+.about-right small{
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0px;
+    padding: 0;
+}
+
+.about-right h1{
+    font-size: 45px;
+    font-weight: 900;
+    line-height: 52px;
+    padding: 0 10px 0 0;
+}
+
+.about-right p{
+    margin: 5px 0;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+.about-right ul{
+    columns: 2;
+    margin: 20px 0 0 0 ;
+    display: block;
+    padding: 0;
+    position: relative;
+    list-style-type: none;
+}
+
+.about-right ul > li{
+    padding-top: 15px;
+}
+
+.timeline-wrapper{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: calc(100vmin - 74px);
+    justify-content: center;
+}
+
+
+.timeline:after{
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #000;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+.time{
+    padding: 0px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+.time:after{
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -14px;
+    background-color: white;
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+
+.left {
+    left: 0;
+}
+
+/* Place the container to the right */
+.right {
+    left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+    left: -12px;
+}
+
+.content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+}
+
+.time.left .content{
+    margin-right: 170px;
+}
+
+.content h2{
+    margin: 0 0 10px 0;
+}
