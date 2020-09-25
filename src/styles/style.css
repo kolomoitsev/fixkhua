@@ -1,7 +1,10 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 body{
     margin: 0;
     padding: 0;
     clear: both;
+    font-family: 'Raleway', sans-serif !important;
 }
 
 
@@ -11,7 +14,6 @@ body{
     position: fixed;
     height: 75px;
     width: 100%;
-    background-color: lawngreen;
 }
 .header-inside {
     display: flex;
@@ -52,6 +54,20 @@ body{
     margin: 0;
 }
 
+.headerMenu ul > li > a{
+    color: #000;
+    font-weight: 800;
+    text-decoration: none;
+    outline: none;
+    font-family: 'Bitter', serif;
+    transition: .1s all ease-in-out;
+}
+
+.headerMenu ul > li > a:hover{
+    color: royalblue;
+}
+
+
 .headerAdditionalInfo{
     display: flex;
     position: relative;
@@ -62,16 +78,24 @@ body{
     justify-content: flex-end;
 }
 .headerAdditionalInfo a {
-    padding: 0 20px;
+    border: 1px solid royalblue;
+    border-radius: 5px;
+    color: #fff;
+    background-color: royalblue;
+    padding: 10px 22px;
+    text-decoration: none !important;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
 }
 
 .sliderWrapper{
     display: block !important;
     position: absolute !important;
     height: calc(100vmin - 75px);
-    width: calc(100% - 75px);
+    width: 100%;
     top: 75px;
-    left: 75px;
+    /*left: 75px;*/
+    /*width: calc(100% - 75px);*/
 
 }
 
@@ -80,12 +104,12 @@ body{
     position: fixed;
     list-style-type: none;
     top: 40%;
-    left: 25px;
+    left: 15px;
     padding: 0;
 }
 
 .slideTemplate{
-    display: block;
+    display: flex;
     position: relative;
     width: 100%;
     height: calc(100vmin - 77px);
@@ -96,6 +120,7 @@ body{
     position: relative;
     width: 100%;
     height: calc(100vmin - 74px);
+    background-color: rgba(93, 162, 255, .7);
 }
 
 .banner-left{
@@ -105,13 +130,14 @@ body{
     height: 100%;
     flex-direction: column;
     justify-content: center;
-    padding: 0 50px;
+    padding: 0 100px;
 }
 
 .banner-left small{
     padding: 5px 0;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 800;
+    color: royalblue;
 }
 
 .banner-left h1{
@@ -125,7 +151,8 @@ body{
     font-size: 18px;
     letter-spacing: 1px;
     line-height: 25px;
-    color: #000;
+    font-weight: 400;
+    color: #3c6382
 }
 
 .banner-right{
@@ -158,7 +185,7 @@ body{
     height: 100%;
     flex-direction: column;
     justify-content: center;
-    padding: 0 50px;
+    padding: 0 100px;
 }
 
 .about-right{
@@ -168,7 +195,7 @@ body{
     height: 100%;
     flex-direction: column;
     justify-content: center;
-    padding: 0 50px;
+    padding: 0 100px;
 }
 
 .about-right small{
@@ -177,19 +204,34 @@ body{
     font-weight: 600;
     letter-spacing: 0px;
     padding: 0;
+    color: #9CB700;
+    text-transform: uppercase;
+    font-weight: 600;
 }
 
 .about-right h1{
     font-size: 45px;
-    font-weight: 900;
     line-height: 52px;
     padding: 0 10px 0 0;
+
+    font-family: 'Bitter', serif;
+
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+
 }
 
 .about-right p{
     margin: 5px 0;
-    font-size: 16px;
+
+    font-family: 'Raleway', sans-serif;
+
+    font-size: 15px;
     line-height: 28px;
+    font-weight: 400;
+    color: #3c6382;
+
 }
 
 .about-right ul{
@@ -202,13 +244,70 @@ body{
 }
 
 .about-right ul > li{
-    padding-top: 15px;
+    padding: 6px 0;
+    font-size: 14px;
+    text-transform: capitalize;
+    font-weight: 700;
+    font-family: 'Bitter', serif;
+}
+
+.about-right ul > li > i{
+    color: #9CB700;
+    font-size: 15px;
+    font-weight: 900;
+}
+
+.timeline-description{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 50%;
+    height: calc(100vmin - 74px);
+}
+
+.timeline-description h3{
+    font-weight: 700;
+    font-family: 'Raleway', sans-serif;
+    margin-left: 150px;
+    margin-top: 15px;
+    font-size: 50px;
+    line-height: 60px;
+}
+
+.timeline-description > p{
+    text-align: center;
+    font-family: 'Bitter', serif;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 400;
+
+}
+
+.question{
+    margin: 15px 0;
+    padding: 0 130px 0 150px;
+}
+
+.quest{
+    margin-top: 20px;
+}
+.quest h4{
+    font-weight: 800;
+    font-size: 15px;
+    line-height: 35px;
+    font-family: 'Raleway', sans-serif ;
+}
+.quest p{
+    font-family: 'Bitter', sans-serif;
+    font-size: 13px;
+    line-height: 30px;
+    font-weight: 500;
 }
 
 .timeline-wrapper{
     display: flex;
     position: relative;
-    width: 100%;
+    width: 50%;
     height: calc(100vmin - 74px);
     justify-content: center;
 }
@@ -321,13 +420,19 @@ body{
 
 .benefits-title h1{
     font-weight:700;
-    font-size: 30px;
+    text-transform: uppercase;
+    font-size: 50px;
+    line-height: 60px;
+    text-align: center;
+    font-family: 'Bitter', serif;
 }
 
 .benefits-title p{
+    font-family: 'Bitter', serif;
     font-size: 14px;
-    color: #555;
-    line-height: 24px;
+    line-height: 30px;
+    font-weight: 400;
+    color: #3c6382;
 }
 
 .benefits{
@@ -336,7 +441,7 @@ body{
     height: 30%;
     align-items: center;
     justify-content: space-around;
-    background-color: #f5f5f5;
+
 }
 
 .brands-slider{
@@ -364,13 +469,15 @@ body{
 }
 .benefit h6{
     font-size: 30px;
-    font-weight: 700;
+    font-weight: 800;
+    font-family: 'Bitter', serif;
 }
 .benefit p{
     font-size: 14px;
     color: #555;
     line-height: 24px;
     font-weight: 500;
+    font-family: 'Raleway', sans-serif;
 }
 
 
@@ -379,7 +486,6 @@ body{
     position: relative;
     width: 100%;
     height: calc(100vmin - 74px);
-    border: 1px solid #000;
     flex-direction: column;
 }
 
@@ -389,12 +495,21 @@ body{
     position: relative;
     width: 100%;
     height: 20%;
+    padding: 25px 80px;
+    font-family: 'Raleway', sans-serif;
+}
+.services-title h1{
+    font-family: 'Raleway', serif;
+    font-weight: 800;
+    font-size: 40px;
 }
 
 .services-title h6{
     letter-spacing: 3px;
     display: inline-block;
     position: relative;
+    font-weight: 700;
+    font-family: 'Bitter', serif;
 }
 
 .services-title h6:after{
@@ -418,7 +533,7 @@ body{
 .services-list{
     display: flex;
     position: relative;
-    flex-direction: column;
+    flex-direction: row;
     width: 100%;
     height: 80%;
 }
@@ -437,4 +552,206 @@ body{
     justify-content: space-evenly;
     list-style-type: none;
     padding: 0 25px;
+    font-family: 'Bitter', sans-serif;
+}
+
+.list-left ul{
+    font-family: 'Bitter', sans-serif;
+}
+
+.list-left ul > li {
+    padding: 20px 50px;
+    transition: all .1s ease-in-out;
+    cursor: pointer;
+    position: relative;
+    font-family: 'Bitter', sans-serif;
+}
+
+.list-left ul > li:hover {
+    background-color: #555555;
+}
+
+.list-left ul > li:hover  > a{
+    margin-left: 20px;
+
+}
+
+
+.list-left ul > li > small{
+    font-size: 45px;
+    font-weight: 700;
+    color: grey;
+    position: absolute;
+    left: 45px;
+    bottom: 10px;
+}
+
+.list-left ul > li > a{
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 30px;
+    font-family: 'Raleway', serif;
+    color: #000;
+    cursor: pointer;
+    padding-left: 8px;
+    margin: 0;
+    transition: .18s;
+    transition-delay: .18s;
+}
+
+.list-description{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    position: relative;
+    height: 100%;
+    padding: 10px 150px;
+    /*margin: 50px 0 0 0 ;*/
+
+}
+
+.list-description h3{
+    font-family: 'Raleway', sans-serif;
+    margin: 15px 0;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.list-description p{
+    line-height: 25px;
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+
+}
+
+.contact-wrapper{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: calc(100vmin - 74px);
+    flex-direction: column;
+}
+
+.contact-title{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 25%;
+    padding: 20px 50px;
+}
+
+.contact-title small{
+    font-size: 16px;
+    line-height: 26px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    color: royalblue;
+}
+
+.contact-title h1{
+    font-size: 50px;
+    line-height: 60px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+    margin: 5px 0;
+}
+
+.contact-title p{
+    font-family: 'Bitter', sans-serif;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 400;
+    color: #555555;
+}
+
+.contact-form-area{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 75%;
+}
+.contact-form-left{
+    display: flex;
+    position: relative;
+    width: 60%;
+    height: 100%;
+}
+
+.contact-form-right{
+    display: flex;
+    position: relative;
+    width: 30%;
+    height: 100%;
+    flex-direction: column;
+}
+
+.contact-form-left form{
+    display: flex;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    /* padding: 20px 0; */
+    margin: 5px 50px;
+    /* justify-content: center; */
+    flex-direction: column;
+
+}
+
+.contact-form-left form label{
+    font-weight: 700;
+    font-family: 'Raleway', sans-serif;
+    margin: 25px 0 0 0;
+}
+
+.contact-form-left form input[type="text"]{
+    font-size: 15px;
+    border: 1px solid #daecfd;
+    border-radius: 3px;
+    outline: none;
+    height: 50px;
+}
+
+.contact-form-left form textarea{
+    font-size: 15px;
+    border: 1px solid #daecfd;
+    border-radius: 3px;
+    outline: none;
+    height: 90px;
+}
+
+.contact-form-left form input[type="submit"]{
+    background-color: royalblue;
+    margin: 15px 0 0 0 ;
+    padding: 15px 30px;
+    color: #fff;
+    border-radius: 4px;
+    font-weight: 600;
+    border: 0;
+    width: 150px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.contact-item{
+    margin: 25px 0 10px 0 ;
+}
+
+.contact-item h6{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.contact-item h6 > i {
+    color: royalblue;
+    font-size: 18px ;
+    margin-right: 10px;
+}
+
+.contact-item p{
+    font-family: 'Raleway', sans-serif;
+    font-size: 13px;
+    line-height: 30px;
+    font-weight: 400;
+    color: #3c6382;
 }
